@@ -6,7 +6,24 @@ body {
     position: relative;
     width: 100vw;
     height: 100vh;
+
+    background-image: url("./img/classroom.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
+/* background-imageをフィルタで画像を暗くする */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: flash 2.3s infinite;
+}
+
 .title-img {
     position: absolute;
     transform: translate(-50%, -50%);
@@ -22,12 +39,11 @@ body {
 }
 .title-img-v {
     display: none;
-    top: 45%;
+    top: 42%;
     left: 50%;
     width: 100%;
 }
 
-/* レスポンシブ スマホはtitle-v を表示、pcはtitle-hを表示 */
 @media screen and (max-width: 768px) {
     .title-img-h {
         display: none;
@@ -75,7 +91,6 @@ body {
     }
 }
 
-
 /* styles.css */
 @keyframes flicker {
     0% {
@@ -93,20 +108,21 @@ body {
 }
 
 @keyframes brightness {
-    0%, 100% {
+    0%,
+    100% {
         filter: brightness(1);
     }
     20% {
         filter: brightness(0.95);
     }
     40% {
-        filter: brightness(1.2);
+        filter: brightness(1.05);
     }
     60% {
         filter: brightness(0.9);
     }
     80% {
-        filter: brightness(1.2);
+        filter: brightness(1.05);
     }
 }
 
@@ -139,7 +155,6 @@ body {
     45% {
         opacity: 1;
     }
-    
 }
 
 .horror {
