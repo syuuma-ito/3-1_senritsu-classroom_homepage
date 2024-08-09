@@ -16,3 +16,8 @@ body {
     padding: 0;
     overflow-x: hidden;
 }
+
+em {
+    font-style: normal;
+    color: var(--color-accent);
+}
