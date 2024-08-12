@@ -21,3 +21,8 @@ em {
     font-style: normal;
     color: var(--color-accent);
 }
+
+.is-hidden {
+    display: none;
+    transition: opacity 2s ease-in-out;
+}
