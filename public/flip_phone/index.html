@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>着信画面</title>
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+                background: linear-gradient(to bottom, #4a4a4a, #333);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                height: 100vh;
+                color: white;
+            }
+
+            .notification {
+                font-size: 2rem;
+                text-align: center;
+                margin-top: 50px;
+            }
+
+            .notification .caller-name {
+                font-weight: bold;
+                font-size: 2.5rem;
+                margin-bottom: 10px;
+            }
+
+            .notification .call-status {
+                font-size: 1.5rem;
+                color: #ccc;
+            }
+
+            .button-container {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                margin-bottom: 20px;
+                max-width: 400px;
+            }
+
+            .button-text-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .button {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.5rem;
+                cursor: pointer;
+                margin: 0 30px;
+            }
+
+            .button-red {
+                background-color: red;
+            }
+
+            .button-green {
+                background-color: green;
+            }
+
+            .icon {
+                fill: white;
+            }
+
+            .button-text {
+                margin-top: 10px;
+                font-size: 1rem;
+            }
+
+            .icon {
+                width: 40px;
+                height: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="notification">
+            <p class="caller-name">蜷茨壹縺譁縲谺</p>
+            <p class="call-status">から着信中</p>
+        </div>
+
+        <div class="button-container">
+            <div class="button-text-container">
+                <div class="button button-red">
+                    <img src="./reject-call-icon.svg" alt="accept-call-icon" class="icon" />
+                </div>
+                <p class="button-text">拒否</p>
+            </div>
+            <div class="button-text-container">
+                <div class="button button-green">
+                    <img src="./accept-call-icon.svg" alt="accept-call-icon" class="icon" />
+                </div>
+                <p class="button-text">応答</p>
+            </div>
+        </div>
+    </body>
+</html>
