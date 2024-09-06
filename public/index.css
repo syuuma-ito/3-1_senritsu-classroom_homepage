@@ -276,3 +276,14 @@ footer {
 .overlay-transition {
     animation: overlay 2s ease-in-out;
 }
+
+.story-item {
+    line-height: 2.5em;
+}
+
+.gallery-item {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
